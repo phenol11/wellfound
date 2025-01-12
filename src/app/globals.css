@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #fefefe;
   --foreground: #171717;
 }
 
@@ -18,4 +18,135 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+.group:hover svg {
+  color: #3e51c9;
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+.sidebar {
+  height: 100%;
+  overflow-y: hidden;
+}
+.sidebarBeside {
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.recharts-legend-item {
+  display: none !important;
+  visibility: none;
+}
+/* for text above Donutchart */
+.custom-word-spacing {
+  word-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .main-coin {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  /* .border-r {
+    display: none !important;
+  } */
+  .sidebarBeside {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .sidebarBeside h2 {
+    font-size: 2.5vw;
+  }
+  .sidebarBeside header h3 {
+    font-size: 2.5vw;
+  }
+  .sidebarBeside header p {
+    font-size: 2.1vw;
+  }
+  .sidebarBeside button {
+    font-size: 2.2vw;
+  }
+  .rank {
+    font-size: 1.4vw !important;
+  }
+
+  .perc-text {
+    font-size: 2vw !important;
+  }
+  .overlay-form {
+    width: 80% !important;
+  }
+  .overlay-form label {
+    font-size: 2.25vw;
+  }
+  .perc-p-text {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 550px) {
+  .overlay-form {
+    width: 95% !important;
+  }
+  .overlay-form label {
+    font-size: 3vw;
+  }
+  .perc-p-text {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+  .sidebar .bg-white {
+    width: 100%;
+    padding: 0 32px 0 32px !important;
+    height: 100px;
+    margin-top: -10px;
+  }
+  .mobile-menu-button {
+    height: 50px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .sidebar.visible {
+    display: block;
+  }
+
+  .mobile-menu-button {
+    display: none;
+  }
+
+  .sm\:hidden {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    display: block;
+  }
 }
